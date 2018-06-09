@@ -46,3 +46,6 @@ nebulas  sdk to unity3d
 
 >    Nebulas>Examples>Simple
 
+## 感谢社区
+#### 本工程处于测试中，如有问题或建议请fork代码后改正并提交，感谢您的支持与贡献。
+#### 工程实现参考于 Android SKD 项目:https://github.com/nebulasio/androidSDK
