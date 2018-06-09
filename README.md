@@ -9,7 +9,7 @@ nebulas  sdk to unity3d
 >    public static void Call(GoodsModel goods, String functionName, String to, String value, String[] args, String serialNumber)
 
 ```
-    public void CallTransfer()
+        public void CallTransfer()
         {
             var gmol = new GoodsModel();
             var serialNumber = Util.getRandomCode(32);
@@ -41,7 +41,8 @@ nebulas  sdk to unity3d
 
 >    public static IEnumerator QueryTransferStatus(String serialNumber, Action<string> onSuccess, Action<string> onFail)
   
-### Examples
+
+## Examples
 
 >    Nebulas>Examples>Simple
 
