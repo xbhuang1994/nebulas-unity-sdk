@@ -46,6 +46,21 @@ public class Simple : MonoBehaviour
         });
     }
 
+    public void SimulationCall()
+    {
+        this.StartCoroutine(
+            SmartContracts.SimulationCall("n1NrqHkmuFAHsifysfBh6gombgeg6wJrfnB", "n1j2Q5E9SU1JnpqbyQLVRM8D2jPeefDXKau", "info", null, (success) =>
+            {
+                Debug.Log(success);
+                TransferStatusHandler.Invoke(success);
+            }, (fail) =>
+            {
+                Debug.LogError(fail);
+                TransferStatusErrorHandler.Invoke(fail);
+            })
+        );
+
+    }
     public void QueryTransferStatus()
     {
         this.StartCoroutine(

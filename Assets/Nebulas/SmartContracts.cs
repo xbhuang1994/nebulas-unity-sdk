@@ -136,6 +136,28 @@ namespace io.nebulas.api
             yield return HttpPost(ENDPOINT, jsonString, onSuccess, onFail);
         }
 
+        public static IEnumerator SimulationCall(string from, string to, string function, string[] args, Action<string> onSuccess, Action<string> onFail)
+        {
+            String ENDPOINT = GetUrl("/v1/user/call");
+            var jParams = new JObject();
+            var jContract = new JObject();
+            jParams.Add("from", from);
+            jParams.Add("to", to);
+            jParams.Add("value", "0");
+            jParams.Add("nonce", 3);
+            jParams.Add("gasLimit", "2000000");
+            jParams.Add("gasPrice", "1000000");
+            jContract.Add("function", function);
+            if (args != null)
+                jContract.Add("args", JsonConvert.SerializeObject(args));
+            else
+                jContract.Add("args", "");
+            jParams.Add("contract", jContract);
+            var jsonString = jParams.ToString();
+            UnityEngine.Debug.Log(jsonString);
+            yield return HttpPost(ENDPOINT, jsonString, onSuccess, onFail);
+
+        }
         public static IEnumerator HttpPost(string ENDPOINT, string jsonString, Action<string> onSuccess, Action<string> onFail)
         {
             byte[] postBytes = System.Text.Encoding.Default.GetBytes(jsonString);
