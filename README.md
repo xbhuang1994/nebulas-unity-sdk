@@ -37,11 +37,11 @@ nebulas  sdk to unity3d
 >    public static void Pay(GoodsModel goods, String to, String value, String serialNumber)
 
 
-#### QueryTransferStatus() :    
+#### QueryTransferStatus    
 
 >    public static IEnumerator QueryTransferStatus(String serialNumber, Action<string> onSuccess, Action<string> onFail)
   
-#### SimulationCall() :
+#### SimulationCall
 >    public static IEnumerator SimulationCall(string from, string to, string function, string[] args, Action<string> onSuccess, Action<string> onFail)
 
 ## Examples
