@@ -1,9 +1,9 @@
 # nebulas-unity-sdk
 nebulas  sdk to unity3d
 
-## 调用接口
+## Interface
 
-#### 调用接口 call():
+#### Interface Call():
     
    
 >    public static void Call(GoodsModel goods, String functionName, String to, String value, String[] args, String serialNumber)
@@ -32,12 +32,12 @@ nebulas  sdk to unity3d
         }
 ```
 
-#### 调用接口 pay
+#### Interface Pay
 
 >    public static void Pay(GoodsModel goods, String to, String value, String serialNumber)
 
 
-#### 调用接口 queryTransferStatus() :    
+#### Interface QueryTransferStatus() :    
 
 >    public static IEnumerator QueryTransferStatus(String serialNumber, Action<string> onSuccess, Action<string> onFail)
   
@@ -46,6 +46,6 @@ nebulas  sdk to unity3d
 
 >    Nebulas>Examples>Simple
 
-## 感谢社区
-#### 本工程处于测试中，如有问题或建议请fork代码后改正并提交，感谢您的支持与贡献。
-#### 工程实现参考于 Android SKD 项目:https://github.com/nebulasio/androidSDK
+## Thanks
+#### This project is under test. If you have any questions or suggestions, please correct the fork code and submit it. Thank you for your support and contribution.
+#### Project Implementation Reference to Android SDK Project:https://github.com/nebulasio/androidSDK
