@@ -3,7 +3,7 @@ nebulas  sdk to unity3d
 
 ## Interface
 
-#### Interface Call():
+#### Call():
     
    
 >    public static void Call(GoodsModel goods, String functionName, String to, String value, String[] args, String serialNumber)
@@ -32,15 +32,17 @@ nebulas  sdk to unity3d
         }
 ```
 
-#### Interface Pay
+#### Pay
 
 >    public static void Pay(GoodsModel goods, String to, String value, String serialNumber)
 
 
-#### Interface QueryTransferStatus() :    
+#### QueryTransferStatus() :    
 
 >    public static IEnumerator QueryTransferStatus(String serialNumber, Action<string> onSuccess, Action<string> onFail)
   
+#### SimulationCall() :
+>    public static IEnumerator SimulationCall(string from, string to, string function, string[] args, Action<string> onSuccess, Action<string> onFail)
 
 ## Examples
 
