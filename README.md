@@ -1,9 +1,10 @@
 # nebulas-unity-sdk
-nebulas  sdk to unity3d
+Multi-platform Unity implementation (WebGL is not supported at this time)
+Help Unity game developers quickly access the Nebulas network to unlock levels, recharge payments, and trade items.
 
-## 调用接口
+## Interface
 
-#### 调用接口 call():
+#### Call():
     
    
 >    public static void Call(GoodsModel goods, String functionName, String to, String value, String[] args, String serialNumber)
@@ -32,20 +33,39 @@ nebulas  sdk to unity3d
         }
 ```
 
-#### 调用接口 pay
+#### Pay
 
 >    public static void Pay(GoodsModel goods, String to, String value, String serialNumber)
 
 
-#### 调用接口 queryTransferStatus() :    
+#### QueryTransferStatus    
 
 >    public static IEnumerator QueryTransferStatus(String serialNumber, Action<string> onSuccess, Action<string> onFail)
   
+#### SimulationCall
+>    public static IEnumerator SimulationCall(string from, string to, string function, string[] args, Action<string> onSuccess, Action<string> onFail)
+```
+    public void SimulationCall()
+    {
+        this.StartCoroutine(
+            SmartContracts.SimulationCall("n1NrqHkmuFAHsifysfBh6gombgeg6wJrfnB", "n1j2Q5E9SU1JnpqbyQLVRM8D2jPeefDXKau", "info", null, (success) =>
+            {
+                Debug.Log(success);
+                TransferStatusHandler.Invoke(success);
+            }, (fail) =>
+            {
+                Debug.LogError(fail);
+                TransferStatusErrorHandler.Invoke(fail);
+            })
+        );
+
+    }
+```
 
 ## Examples
+#### [Nebulas>Examples>Simple.cs](https://github.com/xbhuang1994/nebulas-unity-sdk/blob/master/Assets/Nebulas/Examples/Simple.cs)
+#### [contract_example.js](https://github.com/xbhuang1994/nebulas-unity-sdk/blob/master/contract_example.js)
 
->    Nebulas>Examples>Simple
-
-## 感谢社区
-#### 本工程处于测试中，如有问题或建议请fork代码后改正并提交，感谢您的支持与贡献。
-#### 工程实现参考于 Android SKD 项目:https://github.com/nebulasio/androidSDK
+## Thanks
+#### This project is under test. If you have any questions or suggestions, please correct the fork code and submit it. Thank you for your support and contribution.
+#### Project Implementation Reference to Android SDK Project:https://github.com/nebulasio/androidSDK
