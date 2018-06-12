@@ -63,8 +63,8 @@ Help Unity game developers quickly access the Nebulas network to unlock levels, 
 ```
 
 ## Examples
-
->    Nebulas>Examples>Simple
+#### [Nebulas>Examples>Simple.cs](https://github.com/xbhuang1994/nebulas-unity-sdk/blob/master/Assets/Nebulas/Examples/Simple.cs)
+#### [contract_example.js](https://github.com/xbhuang1994/nebulas-unity-sdk/blob/master/contract_example.js)
 
 ## Thanks
 #### This project is under test. If you have any questions or suggestions, please correct the fork code and submit it. Thank you for your support and contribution.
