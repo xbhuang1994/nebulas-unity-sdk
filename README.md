@@ -1,5 +1,5 @@
 # nebulas-unity-sdk
-Multi-platform Unity implementation (WebGL is not supported at this time)
+Multi-platform Unity implementation (WebExtensionWallet is not supported at this time)
 Help Unity game developers quickly access the Nebulas network to unlock levels, recharge payments, and trade items.
 
 ## Interface
