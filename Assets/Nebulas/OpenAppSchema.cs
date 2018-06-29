@@ -1,6 +1,7 @@
-﻿/**
+/**
  * 打开调启App
  */
+using UnityEngine;
 namespace io.nebulas.schema
 {
     public class OpenAppSchema
@@ -13,6 +14,7 @@ namespace io.nebulas.schema
          */
         public static string getSchemaUrl(string paramsJSON)
         {
+            paramsJSON = WWW.EscapeURL(paramsJSON);
             return string.Format("openapp.nasnano://virtual?params={0}", paramsJSON);
         }
     }
