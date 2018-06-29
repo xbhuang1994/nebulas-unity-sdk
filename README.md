@@ -61,6 +61,10 @@ Help Unity game developers quickly access the Nebulas network to unlock levels, 
 
     }
 ```
+### !!! Build for IOS:
+You sould insert "openapp.nasnano"  into PlayerSetting > Supportd URL schemes
+
+
 
 ## Examples
 #### [Nebulas>Examples>Simple.cs](https://github.com/xbhuang1994/nebulas-unity-sdk/blob/master/Assets/Nebulas/Examples/Simple.cs)
